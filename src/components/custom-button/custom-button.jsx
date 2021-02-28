@@ -2,9 +2,12 @@ import React from "react";
 
 import "./custom-button.scss";
 
-const CustomButton = ({ children, googleBtn, ...rest }) => {
+const CustomButton = ({ children, googleBtn, inverted, ...rest }) => {
   return (
-    <button className={`custom-button ${googleBtn}`} {...rest}>
+    <button
+      className={`${inverted ? "inverted" : ""} custom-button ${googleBtn}`}
+      {...rest}
+    >
       {children}
     </button>
   );
